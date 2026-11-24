@@ -692,13 +692,13 @@
       <div class="section-head">
         <div>
           <h2>“Seeds You Sowed” — Song &amp; Lyrics</h2>
-          <p>Play the background track (<code>seeds-you-sowed.mp3</code> in your repo or any local audio file) or play warm Fender Rhodes chords.</p>
+          <p>Play the background track (<code>song.mp3</code> in your repo or any local audio file) or play warm Fender Rhodes chords.</p>
         </div>
         <button id="copy-lyrics-btn" class="btn" type="button">Copy Lyrics for WhatsApp</button>
       </div>
 
       <div class="panel">
-        <audio id="bg-song" src="seeds-you-sowed.mp3" preload="metadata" loop></audio>
+        <audio id="bg-song" src="song.mp3" preload="metadata" loop></audio>
 
         <div class="player-bar">
           <div class="toolbar">
@@ -715,7 +715,7 @@
         </div>
 
         <p id="audio-status-note" class="audio-note">
-          Place <code>seeds-you-sowed.mp3</code> next to <code>index.html</code> on GitHub for automatic background playback, or tap <strong>Pick Local Audio</strong> to load a song file from your device.
+          Place <code>song.mp3</code> next to <code>index.html</code> on GitHub for automatic background playback, or tap <strong>Pick Local Audio</strong> to load a song file from your device.
         </p>
 
         <div class="lyrics-grid">
@@ -783,7 +783,7 @@ We love you always.</p>
         <div>
           <h2>Chapters in Frames</h2>
           <p>
-            Place your 7 image files in the same folder as <code>index.html</code> on GitHub, or tap
+            Upload <code>dad1.png</code> and <code>dad2.jpg</code> through <code>dad7.jpg</code> next to <code>index.html</code> on GitHub, or tap
             <strong>Upload Local Override</strong> to pick photos directly from your device.
           </p>
         </div>
@@ -889,7 +889,7 @@ We love you always.</p>
     const MEMORIES = [
       {
         id: "m1",
-        file: "1000032397.png",
+        file: "dad1.png",
         category: "family",
         tag: "Family Celebration",
         title: "Smiling Through the Day",
@@ -897,7 +897,7 @@ We love you always.</p>
       },
       {
         id: "m2",
-        file: "1000024615.jpg",
+        file: "dad2.jpg",
         category: "family",
         tag: "Side by Side",
         title: "Standing Tall Together",
@@ -905,7 +905,7 @@ We love you always.</p>
       },
       {
         id: "m3",
-        file: "1000024268.jpg",
+        file: "dad3.jpg",
         category: "work",
         tag: "Hands-On Craft",
         title: "Getting the Job Done Right",
@@ -913,7 +913,7 @@ We love you always.</p>
       },
       {
         id: "m4",
-        file: "1000029420.jpg",
+        file: "dad4.jpg",
         category: "family",
         tag: "Gatherings",
         title: "Joy in the Crowd",
@@ -921,7 +921,7 @@ We love you always.</p>
       },
       {
         id: "m5",
-        file: "1000027731.jpg",
+        file: "dad5.jpg",
         category: "work",
         tag: "Fieldwork",
         title: "Solving Problems on Site",
@@ -929,7 +929,7 @@ We love you always.</p>
       },
       {
         id: "m6",
-        file: "1000023529.jpg",
+        file: "dad6.jpg",
         category: "family",
         tag: "Everyday Moments",
         title: "Quiet Wisdom & Presence",
@@ -937,7 +937,7 @@ We love you always.</p>
       },
       {
         id: "m7",
-        file: "1000024061.jpg",
+        file: "dad7.jpg",
         category: "work",
         tag: "Technical Skill",
         title: "Wired for Excellence",
@@ -1056,7 +1056,7 @@ We love you always.</p>
           await bgSong.play();
           syncSongUI();
         } catch (_) {
-          showToast("Add seeds-you-sowed.mp3 or pick a local audio file");
+          showToast("Add song.mp3 or pick a local audio file");
           syncSongUI();
         }
       } else {
@@ -1125,7 +1125,7 @@ We love you always.</p>
     bgSong.addEventListener("pause", syncSongUI);
     bgSong.addEventListener("error", () => {
       document.getElementById("audio-status-note").innerHTML =
-        "<code>seeds-you-sowed.mp3</code> was not found in this folder yet. Upload it to your GitHub repo or tap <strong>Pick Local Audio</strong>.";
+        "<code>song.mp3</code> was not found in this folder yet. Upload it to your GitHub repo or tap <strong>Pick Local Audio</strong>.";
     });
 
     document.getElementById("audio-upload-input").addEventListener("change", (e) => {
