@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vintage 1975 — Chapter 51 | Dad's 51st Birthday Tribute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #120e0b;
+      --bg-elevated: #1c1510;
+      --card: #241b14;
+      --ink: #f7efe4;
+      --muted: #cbbba6;
+      --accent: #e5a93c;
+      --accent-soft: rgba(229, 169, 60, 0.16);
+      --border: rgba(247, 239, 228, 0.14);
+      --radius: 18px;
+      --shadow: 0 18px 44px rgba(0, 0, 0, 0.42);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(229, 169, 60, 0.14), transparent 36%),
+        radial-gradient(circle at 85% 18%, rgba(194, 92, 46, 0.14), transparent 34%),
+        var(--bg);
+      color: var(--ink);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    /* Navigation */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(14px);
+      background: rgba(18, 14, 11, 0.82);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.85rem 0;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.03em;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.1rem;
+      flex-wrap: wrap;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      border: 1px solid rgba(229, 169, 60, 0.35);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(2.5rem, 6vw, 4.3rem);
+      line-height: 1.05;
+      margin: 0.9rem 0 0.85rem;
+      font-weight: 700;
+    }
+
+    .hero-lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      max-width: 60ch;
+      margin: 0 0 1.5rem;
+    }
+
+    .countdown-box {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      box-shadow: var(--shadow);
+    }
+
+    .countdown-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.65rem;
+      text-align: center;
+    }
+
+    .time-unit {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 0.75rem 0.4rem;
+    }
+
+    .time-num {
+      display: block;
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1.1;
+    }
+
+    .time-text {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .celebration-banner {
+      display: none;
+      margin-top: 0.85rem;
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      background: rgba(229, 169, 60, 0.18);
+      border: 1px solid rgba(229, 169, 60, 0.45);
+      color: #ffe3a8;
+      font-weight: 600;
+    }
+
+    /* Vinyl Emblem */
+    .vinyl-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 1.75rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    .vinyl-disc {
+      width: 190px;
+      height: 190px;
+      margin: 0 auto 1.15rem;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle, #e5a93c 0 18%, #1a130e 19% 21%, #2b2018 22% 44%, #18120d 45% 68%, #2b2018 69% 96%, #120e0b 97% 100%);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .vinyl-disc::after {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 2px solid #8a5d14;
+    }
+
+    .spinning {
+      animation: spin33 10s linear infinite;
+    }
+
+    @keyframes spin33 {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Sections */
+    section {
+      padding: 2.5rem 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.35rem;
+    }
+
+    .section-head h2 {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 2.7rem);
+      margin: 0;
+      line-height: 1.1;
+    }
+
+    .section-head p {
+      margin: 0.25rem 0 0;
+      color: var(--muted);
+      max-width: 56ch;
+    }
+
+    .panel {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    /* Buttons & Controls */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      padding: 0.65rem 1.05rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(229, 169, 60, 0.55);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #171009;
+      border-color: var(--accent);
+    }
+
+    .btn-primary:hover {
+      background: #f0b84e;
+    }
+
+    .btn-sm {
+      padding: 0.42rem 0.72rem;
+      font-size: 0.8rem;
+      border-radius: 8px;
+    }
+
+    .toolbar {
+      display: flex;
+      gap: 0.65rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Music Player & Lyrics */
+    .player-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-bottom: 1.15rem;
+      margin-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .chord-badge {
+      display: inline-block;
+      margin-top: 0.3rem;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .audio-note {
+      font-size: 0.84rem;
+      color: var(--muted);
+      margin-bottom: 1.15rem;
+    }
+
+    .lyrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .stanza {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+    }
+
+    .stanza h3 {
+      margin: 0 0 0.5rem;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+
+    .stanza p {
+      margin: 0;
+      white-space: pre-line;
+      font-size: 0.94rem;
+      color: var(--ink);
+    }
+
+    /* Gallery */
+    .filter-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.15rem;
+    }
+
+    .filter-btn.active {
+      background: var(--accent);
+      color: #171009;
+      border-color: var(--accent);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .photo-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+    }
+
+    .photo-frame {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      background: #0d0907;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .photo-frame.fit-contain img {
+      object-fit: contain;
+      background: #0b0806;
+    }
+
+    .photo-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.35rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      background: linear-gradient(145deg, #2b1f16, #17110d);
+    }
+
+    .photo-body {
+      padding: 0.95rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      flex: 1;
+    }
+
+    .photo-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .photo-title {
+      margin: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .photo-caption {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .photo-actions {
+      display: flex;
+      gap: 0.45rem;
+      flex-wrap: wrap;
+      padding-top: 0.35rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Card Studio */
+    .studio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .field {
+      margin-bottom: 0.9rem;
+    }
+
+    .field label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--muted);
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 0.65rem 0.75rem;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--ink);
+      font-family: inherit;
+      font-size: 0.92rem;
+    }
+
+    .field textarea {
+      min-height: 115px;
+      resize: vertical;
+    }
+
+    .keepsake-preview {
+      background: linear-gradient(160deg, #291e15 0%, #15100c 100%);
+      border: 1px solid rgba(229, 169, 60, 0.35);
+      border-radius: 20px;
+      padding: 1.4rem;
+      text-align: center;
+    }
+
+    .keepsake-photo-wrap {
+      width: 100%;
+      max-height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      border: 1px solid var(--border);
+      background: #0d0907;
+    }
+
+    .keepsake-photo-wrap img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .keepsake-kicker {
+      font-size: 0.78rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .keepsake-title {
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 2rem;
+      margin: 0.25rem 0 0.65rem;
+      line-height: 1.1;
+    }
+
+    .keepsake-msg {
+      margin: 0;
+      color: var(--ink);
+      font-size: 0.96rem;
+      white-space: pre-line;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 60;
+      background: rgba(0, 0, 0, 0.88);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-box {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      max-width: 820px;
+      width: 100%;
+      padding: 1.15rem;
+      text-align: center;
+    }
+
+    .lightbox-box img {
+      max-width: 100%;
+      max-height: 62vh;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #0b0806;
+    }
+
+    .lightbox-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    footer {
+      padding: 2rem 0 3rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--border);
+      margin-top: 2rem;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      z-index: 80;
+      background: var(--accent);
+      color: #171009;
+      font-weight: 700;
+      padding: 0.65rem 1rem;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translateY(10px);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 820px) {
+      .hero-grid,
+      .studio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="#top">Vintage 1975 · Chapter 51</a>
+      <nav class="nav-links">
+        <a href="#song">Song &amp; Lyrics</a>
+        <a href="#gallery">Chapters in Frames</a>
+        <a href="#card-studio">Birthday Card</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Born November 25, 1975 · Turning 51</span>
+          <h1>Here’s to Fifty-One Years of Strength, Grace &amp; Wisdom.</h1>
+          <p class="hero-lead">
+            A dedicated keepsake celebrating Dad’s milestone birthday—pairing the Neo-Soul tribute song
+            <em>“Seeds You Sowed”</em> with family moments, hands-on craft, and a personalized birthday card.
+          </p>
+
+          <div class="countdown-box">
+            <div class="countdown-label">Countdown to November 25, 2026 (00:00 Local Time)</div>
+            <div class="countdown-grid">
+              <div class="time-unit"><span id="cd-days" class="time-num">00</span><span class="time-text">Days</span></div>
+              <div class="time-unit"><span id="cd-hours" class="time-num">00</span><span class="time-text">Hours</span></div>
+              <div class="time-unit"><span id="cd-mins" class="time-num">00</span><span class="time-text">Minutes</span></div>
+              <div class="time-unit"><span id="cd-secs" class="time-num">00</span><span class="time-text">Seconds</span></div>
+            </div>
+            <div id="birthday-banner" class="celebration-banner">
+              Happy 51st Birthday, Dad! Wishing you health, peace, and joy today and always.
+            </div>
+          </div>
+        </div>
+
+        <div class="vinyl-card">
+          <div id="vinyl-disc" class="vinyl-disc" aria-hidden="true"></div>
+          <div style="font-weight: 700; font-size: 1.05rem;">“Seeds You Sowed”</div>
+          <div style="color: var(--muted); font-size: 0.88rem; margin-bottom: 0.9rem;">
+            Album: Chapters of Grace · 90 BPM Neo-Soul
+          </div>
+          <button id="hero-play-btn" class="btn btn-primary" type="button">Play Background Song</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Song & Lyrics -->
+    <section id="song">
+      <div class="section-head">
+        <div>
+          <h2>“Seeds You Sowed” — Song &amp; Lyrics</h2>
+          <p>Play the background track (<code>seeds-you-sowed.mp3</code> in your repo or any local audio file) or play warm Fender Rhodes chords.</p>
+        </div>
+        <button id="copy-lyrics-btn" class="btn" type="button">Copy Lyrics for WhatsApp</button>
+      </div>
+
+      <div class="panel">
+        <audio id="bg-song" src="seeds-you-sowed.mp3" preload="metadata" loop></audio>
+
+        <div class="player-bar">
+          <div class="toolbar">
+            <button id="toggle-song-btn" class="btn btn-primary" type="button">Play Background Song</button>
+            <button id="toggle-chords-btn" class="btn" type="button">Play Rhodes Chords</button>
+            <label class="btn btn-sm" for="audio-upload-input">Pick Local Audio</label>
+            <input id="audio-upload-input" type="file" accept="audio/*" hidden />
+            <span id="chord-display" class="chord-badge">Audio: Ready (90 BPM)</span>
+          </div>
+          <label style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.88rem; color: var(--muted);">
+            Volume
+            <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="0.5" />
+          </label>
+        </div>
+
+        <p id="audio-status-note" class="audio-note">
+          Place <code>seeds-you-sowed.mp3</code> next to <code>index.html</code> on GitHub for automatic background playback, or tap <strong>Pick Local Audio</strong> to load a song file from your device.
+        </p>
+
+        <div class="lyrics-grid">
+          <article class="stanza">
+            <h3>Intro</h3>
+            <p>Yeah nineteen seventy five a vintage year.
+Grown folks music for a monumental milestone.</p>
+          </article>
+
+          <article class="stanza">
+            <h3>Verse 1</h3>
+            <p>The calendar turned and the pages they fell
+Stories you lived and the wisdom you tell
+November cold but your spirit was bright
+You were the beacon a guiding light
+Fifty one years like a fine aged wine
+Sweeter and richer with passage of time
+Hands that are strong yet they handle with care
+Always a shoulder when burdens were there</p>
+          </article>
+
+          <article class="stanza">
+            <h3>Chorus</h3>
+            <p>So here is to you and the life that you live
+For all of the love and the wisdom you give
+Now look at the man that you have become
+The journey is sweet and it has just begun
+Here is to you standing so tall and so true
+Grateful for everything found here in you
+Here is to you in the prime of your day
+Celebrating the life that you led all the way</p>
+          </article>
+
+          <article class="stanza">
+            <h3>Verse 2</h3>
+            <p>I see your smile and I see where I stand
+Grown from the seeds that you sowed with your hand
+Lessons not taught just by what you would say
+But how you would live each and every sweet day
+An anchor of hope in the midst of the storm
+A fire that is steady to keep my heart warm
+They say fifty one is a new kind of start
+But you always held young at the beat of your heart</p>
+          </article>
+
+          <article class="stanza">
+            <h3>Final Chorus &amp; Outro</h3>
+            <p>So here is to you and the life that you live
+For all of the love and the wisdom you give
+Now look at the man that you have become
+The journey is sweet and it has just begun
+
+(Yeah, happy birthday Dad.)
+Here is to many more.
+To fifty one and beyond.
+We love you always.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section id="gallery">
+      <div class="section-head">
+        <div>
+          <h2>Chapters in Frames</h2>
+          <p>
+            Place your 7 image files in the same folder as <code>index.html</code> on GitHub, or tap
+            <strong>Upload Local Override</strong> to pick photos directly from your device.
+          </p>
+        </div>
+        <div class="toolbar">
+          <button id="fit-toggle-btn" class="btn" type="button">Fit: Cover Crop</button>
+          <label class="btn btn-primary" for="gallery-upload-input">Upload Local Override</label>
+          <input id="gallery-upload-input" type="file" accept="image/*" multiple hidden />
+          <button id="clear-overrides-btn" class="btn btn-sm" type="button">Use Repo Files</button>
+        </div>
+      </div>
+
+      <div class="filter-row" role="tablist" aria-label="Filter photos">
+        <button class="btn btn-sm filter-btn active" data-filter="all" type="button">All 7 Memories</button>
+        <button class="btn btn-sm filter-btn" data-filter="family" type="button">Family &amp; Togetherness</button>
+        <button class="btn btn-sm filter-btn" data-filter="work" type="button">Craft &amp; Hard Work</button>
+      </div>
+
+      <div id="gallery-grid" class="gallery-grid"></div>
+    </section>
+
+    <!-- Birthday Card Studio -->
+    <section id="card-studio">
+      <div class="section-head">
+        <div>
+          <h2>51st Birthday Keepsake Card</h2>
+          <p>Customize a message, pick a memory photo, and download a PNG card ready for WhatsApp.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="studio-grid">
+          <div>
+            <div class="field">
+              <label for="dad-name-input">Dad’s Name / Title</label>
+              <input id="dad-name-input" type="text" value="Dad" />
+            </div>
+
+            <div class="field">
+              <label for="message-preset">Message Preset</label>
+              <select id="message-preset">
+                <option value="warm">Warm &amp; Grateful</option>
+                <option value="classic">Short &amp; Classic</option>
+                <option value="light">Lighthearted</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="card-photo-select">Featured Photo on Card</label>
+              <select id="card-photo-select"></select>
+            </div>
+
+            <div class="field">
+              <label for="card-message-input">Birthday Note</label>
+              <textarea id="card-message-input"></textarea>
+            </div>
+
+            <div class="toolbar">
+              <button id="copy-wish-btn" class="btn" type="button">Copy Wish</button>
+              <button id="download-card-btn" class="btn btn-primary" type="button">Download PNG Card</button>
+            </div>
+          </div>
+
+          <div class="keepsake-preview">
+            <div class="keepsake-photo-wrap" id="keepsake-photo-box">
+              <img id="keepsake-preview-img" alt="Selected keepsake photo" />
+            </div>
+            <div class="keepsake-kicker">Vintage 1975 · 51st Birthday Tribute</div>
+            <h3 id="keepsake-heading" class="keepsake-title">Happy 51st Birthday, Dad!</h3>
+            <p id="keepsake-body" class="keepsake-msg"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <div class="lightbox-box">
+      <img id="lightbox-img" alt="" />
+      <div class="lightbox-bar">
+        <div style="text-align: left;">
+          <div id="lightbox-title" style="font-weight: 700;"></div>
+          <div id="lightbox-caption" style="font-size: 0.88rem; color: var(--muted);"></div>
+        </div>
+        <div class="toolbar">
+          <button id="lb-prev" class="btn btn-sm" type="button">← Prev</button>
+          <button id="lb-next" class="btn btn-sm" type="button">Next →</button>
+          <button id="lb-close" class="btn btn-sm btn-primary" type="button">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <footer>
+    <div class="container">
+      Vintage 1975 — Chapter 51 · Built with love for Dad’s 51st Birthday (November 25, 2026)
+    </div>
+  </footer>
+
+  <script>
+    const MEMORIES = [
+      {
+        id: "m1",
+        file: "1000032397.png",
+        category: "family",
+        tag: "Family Celebration",
+        title: "Smiling Through the Day",
+        caption: "Surrounded by family and good company—steady, calm, and always proud of everyone around you."
+      },
+      {
+        id: "m2",
+        file: "1000024615.jpg",
+        category: "family",
+        tag: "Side by Side",
+        title: "Standing Tall Together",
+        caption: "Every step forward carries the encouragement, discipline, and support you’ve given along the way."
+      },
+      {
+        id: "m3",
+        file: "1000024268.jpg",
+        category: "work",
+        tag: "Hands-On Craft",
+        title: "Getting the Job Done Right",
+        caption: "Patience, precision, and real practical skill—showing what dedication looks like in action."
+      },
+      {
+        id: "m4",
+        file: "1000029420.jpg",
+        category: "family",
+        tag: "Gatherings",
+        title: "Joy in the Crowd",
+        caption: "Laughter outdoors and warmth that brings people together across generations."
+      },
+      {
+        id: "m5",
+        file: "1000027731.jpg",
+        category: "work",
+        tag: "Fieldwork",
+        title: "Solving Problems on Site",
+        caption: "Focused out in the field, testing and building things that last."
+      },
+      {
+        id: "m6",
+        file: "1000023529.jpg",
+        category: "family",
+        tag: "Everyday Moments",
+        title: "Quiet Wisdom & Presence",
+        caption: "Simple, grounded moments together that mean more than words can fit."
+      },
+      {
+        id: "m7",
+        file: "1000024061.jpg",
+        category: "work",
+        tag: "Technical Skill",
+        title: "Wired for Excellence",
+        caption: "Careful attention to detail—whether fixing, wiring, or guiding us through life."
+      }
+    ];
+
+    const PRESETS = {
+      warm: "Thank you for always having my back, leading by example, and being my biggest role model. Wishing you great health, peace, and an amazing 51st year ahead.",
+      classic: "Hope your 51st birthday is filled with rest, good food, and great company. Cheers to another year of strength and blessings.",
+      light: "Happy 51st birthday! You still don’t look a day over 35… at least if I squint. Have the best day today!"
+    };
+
+    const STORAGE_KEY = "dad51_local_overrides_v1";
+    let localOverrides = {};
+    try {
+      localOverrides = JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+    } catch (_) {
+      localOverrides = {};
+    }
+
+    let activeFilter = "all";
+    let fitContain = false;
+    let lightboxIndex = 0;
+
+    function showToast(msg) {
+      const toast = document.getElementById("toast");
+      toast.textContent = msg;
+      toast.classList.add("show");
+      clearTimeout(showToast._timer);
+      showToast._timer = setTimeout(() => toast.classList.remove("show"), 2400);
+    }
+
+    function getPhotoSrc(memory) {
+      return localOverrides[memory.id] || memory.file;
+    }
+
+    /* Countdown to Nov 25, 2026 00:00:00 local time */
+    function updateCountdown() {
+      const target = new Date(2026, 10, 25, 0, 0, 0).getTime();
+      const now = Date.now();
+      const diff = target - now;
+
+      const banner = document.getElementById("birthday-banner");
+      if (diff <= 0) {
+        document.getElementById("cd-days").textContent = "00";
+        document.getElementById("cd-hours").textContent = "00";
+        document.getElementById("cd-mins").textContent = "00";
+        document.getElementById("cd-secs").textContent = "00";
+        banner.style.display = "block";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const mins = Math.floor((diff / (1000 * 60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+
+      document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
+      document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
+      document.getElementById("cd-mins").textContent = String(mins).padStart(2, "0");
+      document.getElementById("cd-secs").textContent = String(secs).padStart(2, "0");
+    }
+
+    /* Background Song (<audio>) + Web Audio API Rhodes Chords */
+    const bgSong = document.getElementById("bg-song");
+    const toggleSongBtn = document.getElementById("toggle-song-btn");
+    const heroPlayBtn = document.getElementById("hero-play-btn");
+    const toggleChordsBtn = document.getElementById("toggle-chords-btn");
+    const volumeSlider = document.getElementById("volume-slider");
+    const chordDisplay = document.getElementById("chord-display");
+    const vinylDisc = document.getElementById("vinyl-disc");
+
+    bgSong.volume = parseFloat(volumeSlider.value);
+
+    let audioCtx = null;
+    let masterGain = null;
+    let chordInterval = null;
+    let isChordsPlaying = false;
+
+    const CHORDS = [
+      { name: "Fmaj9", freqs: [174.61, 220.0, 261.63, 329.63, 392.0] },
+      { name: "Em7", freqs: [164.81, 196.0, 246.94, 293.66] },
+      { name: "Dm9", freqs: [146.83, 174.61, 220.0, 261.63, 329.63] },
+      { name: "Cmaj9", freqs: [130.81, 196.0, 246.94, 293.66, 329.63] }
+    ];
+
+    function stopChords() {
+      if (isChordsPlaying) {
+        isChordsPlaying = false;
+        clearInterval(chordInterval);
+        toggleChordsBtn.textContent = "Play Rhodes Chords";
+      }
+    }
+
+    function syncSongUI() {
+      const playingSong = !bgSong.paused;
+      toggleSongBtn.textContent = playingSong ? "Pause Background Song" : "Play Background Song";
+      heroPlayBtn.textContent = playingSong ? "Pause Background Song" : "Play Background Song";
+      if (playingSong || isChordsPlaying) {
+        vinylDisc.classList.add("spinning");
+      } else {
+        vinylDisc.classList.remove("spinning");
+      }
+      if (playingSong) {
+        chordDisplay.textContent = "Now Playing: Background Song (Loop)";
+      } else if (!isChordsPlaying) {
+        chordDisplay.textContent = "Audio: Ready (90 BPM)";
+      }
+    }
+
+    async function toggleBackgroundSong() {
+      if (bgSong.paused) {
+        stopChords();
+        try {
+          await bgSong.play();
+          syncSongUI();
+        } catch (_) {
+          showToast("Add seeds-you-sowed.mp3 or pick a local audio file");
+          syncSongUI();
+        }
+      } else {
+        bgSong.pause();
+        syncSongUI();
+      }
+    }
+
+    function playChord(chord) {
+      if (!audioCtx) return;
+      const now = audioCtx.currentTime;
+      chordDisplay.textContent = `Chord: ${chord.name} · 90 BPM`;
+
+      chord.freqs.forEach((f, idx) => {
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = idx === 0 ? "sine" : "triangle";
+        osc.frequency.setValueAtTime(f, now);
+
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.linearRampToValueAtTime(0.08 / chord.freqs.length, now + 0.08);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.5);
+
+        osc.connect(gain);
+        gain.connect(masterGain);
+        osc.start(now);
+        osc.stop(now + 2.55);
+      });
+    }
+
+    function toggleChords() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContext();
+        masterGain = audioCtx.createGain();
+        masterGain.gain.value = parseFloat(volumeSlider.value);
+        masterGain.connect(audioCtx.destination);
+      }
+
+      if (audioCtx.state === "suspended") {
+        audioCtx.resume();
+      }
+
+      if (!isChordsPlaying) {
+        if (!bgSong.paused) {
+          bgSong.pause();
+        }
+        isChordsPlaying = true;
+        let step = 0;
+        playChord(CHORDS[step % CHORDS.length]);
+        chordInterval = setInterval(() => {
+          step += 1;
+          playChord(CHORDS[step % CHORDS.length]);
+        }, 2666);
+        toggleChordsBtn.textContent = "Pause Rhodes Chords";
+        vinylDisc.classList.add("spinning");
+        syncSongUI();
+      } else {
+        stopChords();
+        chordDisplay.textContent = "Chord: Paused";
+        syncSongUI();
+      }
+    }
+
+    bgSong.addEventListener("play", syncSongUI);
+    bgSong.addEventListener("pause", syncSongUI);
+    bgSong.addEventListener("error", () => {
+      document.getElementById("audio-status-note").innerHTML =
+        "<code>seeds-you-sowed.mp3</code> was not found in this folder yet. Upload it to your GitHub repo or tap <strong>Pick Local Audio</strong>.";
+    });
+
+    document.getElementById("audio-upload-input").addEventListener("change", (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+      stopChords();
+      const objectUrl = URL.createObjectURL(file);
+      bgSong.src = objectUrl;
+      bgSong.play().then(syncSongUI).catch(syncSongUI);
+      document.getElementById("audio-status-note").textContent = `Loaded local audio: ${file.name}`;
+      showToast(`Playing ${file.name}`);
+      e.target.value = "";
+    });
+
+    /* Render Gallery */
+    function renderGallery() {
+      const grid = document.getElementById("gallery-grid");
+      grid.innerHTML = "";
+
+      const visible = MEMORIES.filter(m => activeFilter === "all" || m.category === activeFilter);
+
+      visible.forEach((mem) => {
+        const card = document.createElement("article");
+        card.className = "photo-card";
+
+        const frame = document.createElement("div");
+        frame.className = `photo-frame${fitContain ? " fit-contain" : ""}`;
+
+        const img = document.createElement("img");
+        img.src = getPhotoSrc(mem);
+        img.alt = mem.title;
+        img.loading = "lazy";
+
+        const fallback = document.createElement("div");
+        fallback.className = "photo-fallback";
+        fallback.innerHTML = `<strong>${mem.file}</strong><span>Add this file to your repo folder or tap Upload Local Override.</span>`;
+
+        img.addEventListener("error", () => {
+          img.style.display = "none";
+          fallback.style.display = "flex";
+        });
+
+        frame.appendChild(img);
+        frame.appendChild(fallback);
+        frame.addEventListener("click", () => {
+          const idx = MEMORIES.findIndex(item => item.id === mem.id);
+          openLightbox(idx);
+        });
+
+        const body = document.createElement("div");
+        body.className = "photo-body";
+        body.innerHTML = `
+          <div class="photo-meta">
+            <span>${mem.tag}</span>
+            <span>${localOverrides[mem.id] ? "Local Photo" : mem.file}</span>
+          </div>
+          <h3 class="photo-title">${mem.title}</h3>
+          <p class="photo-caption">${mem.caption}</p>
+        `;
+
+        const actions = document.createElement("div");
+        actions.className = "photo-actions";
+
+        const useBtn = document.createElement("button");
+        useBtn.className = "btn btn-sm";
+        useBtn.type = "button";
+        useBtn.textContent = "Use on Card";
+        useBtn.addEventListener("click", () => {
+          document.getElementById("card-photo-select").value = mem.id;
+          syncKeepsakePreview();
+          document.getElementById("card-studio").scrollIntoView({ behavior: "smooth" });
+          showToast(`Selected "${mem.title}" for the card`);
+        });
+
+        const viewBtn = document.createElement("button");
+        viewBtn.className = "btn btn-sm";
+        viewBtn.type = "button";
+        viewBtn.textContent = "View Full";
+        viewBtn.addEventListener("click", () => {
+          const idx = MEMORIES.findIndex(item => item.id === mem.id);
+          openLightbox(idx);
+        });
+
+        actions.appendChild(useBtn);
+        actions.appendChild(viewBtn);
+        body.appendChild(actions);
+        card.appendChild(frame);
+        card.appendChild(body);
+        grid.appendChild(card);
+      });
+    }
+
+    /* Lightbox */
+    function openLightbox(index) {
+      lightboxIndex = (index + MEMORIES.length) % MEMORIES.length;
+      const mem = MEMORIES[lightboxIndex];
+      const lb = document.getElementById("lightbox");
+      const lbImg = document.getElementById("lightbox-img");
+      lbImg.src = getPhotoSrc(mem);
+      lbImg.alt = mem.title;
+      document.getElementById("lightbox-title").textContent = mem.title;
+      document.getElementById("lightbox-caption").textContent = mem.caption;
+      lb.classList.add("open");
+    }
+
+    function closeLightbox() {
+      document.getElementById("lightbox").classList.remove("open");
+    }
+
+    /* Card Studio & Canvas PNG Export */
+    function populatePhotoSelect() {
+      const select = document.getElementById("card-photo-select");
+      select.innerHTML = `<option value="none">No Photo (Typography Only)</option>`;
+      MEMORIES.forEach((m, i) => {
+        const opt = document.createElement("option");
+        opt.value = m.id;
+        opt.textContent = `${i + 1}. ${m.title}`;
+        select.appendChild(opt);
+      });
+      select.value = MEMORIES[0].id;
+    }
+
+    function syncKeepsakePreview() {
+      const name = document.getElementById("dad-name-input").value.trim() || "Dad";
+      const note = document.getElementById("card-message-input").value.trim();
+      const photoId = document.getElementById("card-photo-select").value;
+      const photoBox = document.getElementById("keepsake-photo-box");
+      const previewImg = document.getElementById("keepsake-preview-img");
+
+      document.getElementById("keepsake-heading").textContent = `Happy 51st Birthday, ${name}!`;
+      document.getElementById("keepsake-body").textContent = note;
+
+      if (photoId === "none") {
+        photoBox.style.display = "none";
+      } else {
+        const mem = MEMORIES.find(m => m.id === photoId);
+        if (mem) {
+          photoBox.style.display = "block";
+          previewImg.src = getPhotoSrc(mem);
+          previewImg.alt = mem.title;
+        }
+      }
+    }
+
+    function wrapCanvasText(ctx, text, x, y, maxWidth, lineHeight) {
+      const paragraphs = text.split("\n");
+      let currentY = y;
+      paragraphs.forEach((para, pIdx) => {
+        const words = para.split(/\s+/).filter(Boolean);
+        let line = "";
+        for (let i = 0; i < words.length; i++) {
+          const testLine = line ? `${line} ${words[i]}` : words[i];
+          if (ctx.measureText(testLine).width > maxWidth && line) {
+            ctx.fillText(line, x, currentY);
+            line = words[i];
+            currentY += lineHeight;
+          } else {
+            line = testLine;
+          }
+        }
+        if (line) {
+          ctx.fillText(line, x, currentY);
+          currentY += lineHeight;
+        }
+        if (pIdx < paragraphs.length - 1) {
+          currentY += lineHeight * 0.4;
+        }
+      });
+      return currentY;
+    }
+
+    async function downloadCardPNG() {
+      const name = document.getElementById("dad-name-input").value.trim() || "Dad";
+      const note = document.getElementById("card-message-input").value.trim();
+      const photoId = document.getElementById("card-photo-select").value;
+
+      const canvas = document.createElement("canvas");
+      canvas.width = 1080;
+      canvas.height = 1350;
+      const ctx = canvas.getContext("2d");
+
+      const grad = ctx.createLinearGradient(0, 0, 1080, 1350);
+      grad.addColorStop(0, "#261b12");
+      grad.addColorStop(1, "#120e0b");
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.strokeStyle = "rgba(229, 169, 60, 0.45)";
+      ctx.lineWidth = 4;
+      ctx.strokeRect(42, 42, canvas.width - 84, canvas.height - 84);
+
+      ctx.textAlign = "center";
+      ctx.fillStyle = "#e5a93c";
+      ctx.font = "700 24px 'Plus Jakarta Sans', sans-serif";
+      ctx.fillText("VINTAGE 1975 · 51ST BIRTHDAY TRIBUTE", 540, 118);
+
+      let textStartY = 230;
+
+      if (photoId !== "none") {
+        const mem = MEMORIES.find(m => m.id === photoId);
+        if (mem) {
+          try {
+            const loadedImg = await new Promise((resolve, reject) => {
+              const im = new Image();
+              im.crossOrigin = "anonymous";
+              im.onload = () => resolve(im);
+              im.onerror = reject;
+              im.src = getPhotoSrc(mem);
+            });
+
+            const boxX = 140;
+            const boxY = 155;
+            const boxW = 800;
+            const boxH = 520;
+
+            ctx.save();
+            ctx.beginPath();
+            ctx.roundRect(boxX, boxY, boxW, boxH, 24);
+            ctx.clip();
+            ctx.fillStyle = "#0b0806";
+            ctx.fillRect(boxX, boxY, boxW, boxH);
+
+            const scale = Math.max(boxW / loadedImg.width, boxH / loadedImg.height);
+            const drawW = loadedImg.width * scale;
+            const drawH = loadedImg.height * scale;
+            const drawX = boxX + (boxW - drawW) / 2;
+            const drawY = boxY + (boxH - drawH) / 2;
+            ctx.drawImage(loadedImg, drawX, drawY, drawW, drawH);
+            ctx.restore();
+
+            textStartY = 755;
+          } catch (_) {
+            textStartY = 250;
+          }
+        }
+      }
+
+      ctx.fillStyle = "#f7efe4";
+      ctx.font = "700 62px 'Cormorant Garamond', Georgia, serif";
+      ctx.fillText(`Happy 51st Birthday, ${name}!`, 540, textStartY);
+
+      ctx.fillStyle = "#e8dccb";
+      ctx.font = "400 32px 'Plus Jakarta Sans', sans-serif";
+      wrapCanvasText(ctx, note, 540, textStartY + 75, 840, 46);
+
+      const link = document.createElement("a");
+      link.download = "dad-51st-birthday-card.png";
+      link.href = canvas.toDataURL("image/png");
+      link.click();
+      showToast("Downloaded PNG birthday card");
+    }
+
+    /* Event Listeners */
+    toggleSongBtn.addEventListener("click", toggleBackgroundSong);
+    heroPlayBtn.addEventListener("click", toggleBackgroundSong);
+    toggleChordsBtn.addEventListener("click", toggleChords);
+    volumeSlider.addEventListener("input", (e) => {
+      const vol = parseFloat(e.target.value);
+      bgSong.volume = vol;
+      if (masterGain) masterGain.gain.value = vol;
+    });
+
+    document.getElementById("copy-lyrics-btn").addEventListener("click", () => {
+      const text = Array.from(document.querySelectorAll(".stanza"))
+        .map(s => `${s.querySelector("h3").textContent}\n${s.querySelector("p").textContent}`)
+        .join("\n\n");
+      navigator.clipboard.writeText(text).then(() => showToast("Lyrics copied for WhatsApp"));
+    });
+
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        activeFilter = btn.dataset.filter;
+        renderGallery();
+      });
+    });
+
+    document.getElementById("fit-toggle-btn").addEventListener("click", (e) => {
+      fitContain = !fitContain;
+      e.currentTarget.textContent = fitContain ? "Fit: Full Frame" : "Fit: Cover Crop";
+      renderGallery();
+    });
+
+    document.getElementById("gallery-upload-input").addEventListener("change", (e) => {
+      const files = Array.from(e.target.files || []);
+      if (!files.length) return;
+
+      files.forEach((file, idx) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const matched = MEMORIES.find(m => m.file.toLowerCase() === file.name.toLowerCase());
+          const targetMem = matched || MEMORIES[idx % MEMORIES.length];
+          localOverrides[targetMem.id] = reader.result;
+          try {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(localOverrides));
+          } catch (_) {
+            // Keep in memory if storage quota is exceeded
+          }
+          renderGallery();
+          syncKeepsakePreview();
+        };
+        reader.readAsDataURL(file);
+      });
+      showToast(`Loaded ${files.length} local photo(s)`);
+      e.target.value = "";
+    });
+
+    document.getElementById("clear-overrides-btn").addEventListener("click", () => {
+      localOverrides = {};
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch (_) {}
+      renderGallery();
+      syncKeepsakePreview();
+      showToast("Switched back to repository image files");
+    });
+
+    document.getElementById("dad-name-input").addEventListener("input", syncKeepsakePreview);
+    document.getElementById("card-message-input").addEventListener("input", syncKeepsakePreview);
+    document.getElementById("card-photo-select").addEventListener("change", syncKeepsakePreview);
+    document.getElementById("message-preset").addEventListener("change", (e) => {
+      document.getElementById("card-message-input").value = PRESETS[e.target.value] || PRESETS.warm;
+      syncKeepsakePreview();
+    });
+
+    document.getElementById("copy-wish-btn").addEventListener("click", () => {
+      const heading = document.getElementById("keepsake-heading").textContent;
+      const body = document.getElementById("keepsake-body").textContent;
+      navigator.clipboard.writeText(`${heading}\n\n${body}`).then(() => showToast("Birthday wish copied"));
+    });
+
+    document.getElementById("download-card-btn").addEventListener("click", downloadCardPNG);
+
+    document.getElementById("lb-prev").addEventListener("click", () => openLightbox(lightboxIndex - 1));
+    document.getElementById("lb-next").addEventListener("click", () => openLightbox(lightboxIndex + 1));
+    document.getElementById("lb-close").addEventListener("click", closeLightbox);
+    document.getElementById("lightbox").addEventListener("click", (e) => {
+      if (e.target.id === "lightbox") closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      const lbOpen = document.getElementById("lightbox").classList.contains("open");
+      if (!lbOpen) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") openLightbox(lightboxIndex - 1);
+      if (e.key === "ArrowRight") openLightbox(lightboxIndex + 1);
+    });
+
+    /* Init */
+    document.getElementById("card-message-input").value = PRESETS.warm;
+    populatePhotoSelect();
+    renderGallery();
+    syncKeepsakePreview();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
